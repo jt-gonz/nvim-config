@@ -33,6 +33,8 @@ return {
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      ocaml = { 'ocamlformat' },
+      cpp = { 'clang-format' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

@@ -5,6 +5,13 @@ return {
   init = function()
     vim.cmd.colorscheme 'catppuccin'
     vim.api.nvim_set_hl(0, 'CmpGhostText', { link = 'Comment', default = true })
+    vim.diagnostic.config {
+      virtual_text = true,
+      float = {
+        border = 'rounded',
+        focusable = true,
+      },
+    }
     -- vim.api.nvim_set_hl(0, 'CustomBorder', { fg = '#F56F6F' })
   end,
   opts = {
