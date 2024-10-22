@@ -4,10 +4,10 @@
 ====         .----------------------.   | === |          ====
 ====         |.-""""""""""""""""""-.|   |-----|          ====
 ====         ||                    ||   | === |          ====
-====         ||   KICKSTART.NVIM   ||   |-----|          ====
+====         ||    JONATHAN.NVIM   ||   |-----|          ====
 ====         ||                    ||   | === |          ====
 ====         ||                    ||   |-----|          ====
-====         ||:Tutor              ||   |:::::|          ====
+====         ||                    ||   |:::::|          ====
 ====         |'-..................-'|   |____o|          ====
 ====         `"")----------------(""`   ___________      ====
 ====        /::::::::::|  |::::::::::\  \ no mouse \     ====
@@ -28,13 +28,6 @@ vim.g.have_nerd_font = true
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
-  -- NOTE: Plugins can specify dependencies.
-  --
-  -- The dependencies are proper plugin specifications as well - anything
-  -- you do for a plugin at the top level, you can do for a dependency.
-  --
-  -- Use the `dependencies` key to specify the dependencies of a particular plugin
-
   -- LSP Plugins
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -50,7 +43,7 @@ require('lazy').setup({
   },
   { 'Bilal2453/luvit-meta', lazy = true },
 
-  { -- Collection of various small independent plugins/modules
+  {
     'echasnovski/mini.nvim',
     config = function()
       -- Better Around/Inside textobjects
@@ -67,6 +60,17 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      require('mini.comment').setup {
+        options = {
+          ignore_blank_line = true,
+        },
+        mappings = {
+          comment = '<leader>/',
+          comment_line = '<leader>/',
+          comment_visual = '<leader>/',
+        },
+      }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
