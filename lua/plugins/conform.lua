@@ -36,7 +36,7 @@ return {
       cpp = { 'clang-format' },
       lua = { 'stylua' },
       ocaml = { 'ocamlformat' },
-      python = { 'black' },
+      python = { 'isort', 'black' },
       rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
