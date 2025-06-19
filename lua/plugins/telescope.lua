@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   -- Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
@@ -5,6 +9,7 @@ return {
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'benfowler/telescope-luasnip.nvim',
     {
       'nvim-telescope/telescope-fzf-native.nvim',
 

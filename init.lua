@@ -23,7 +23,6 @@ Learn about lua:
 require 'config.keymaps'
 require 'config.options'
 require 'config.autocommands'
-vim.g.have_nerd_font = true
 
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
