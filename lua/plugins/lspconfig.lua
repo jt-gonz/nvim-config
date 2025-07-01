@@ -70,9 +70,9 @@ return {
       },
       -- basedpyright = {},
       pyright = {},
-      rust_analyzer = {},
+      -- rust_analyzer = {},
       tailwindcss = {},
-      ocamllsp = {},
+      -- ocamllsp = {},
 
       lua_ls = {
         settings = {
@@ -88,8 +88,8 @@ return {
       -- Format servers
       black = {},
       isort = {},
-      ocamlformat = {},
-      rustfmt = {},
+      -- ocamlformat = {},
+      -- rustfmt = {},
       stylua = {},
     }
 
